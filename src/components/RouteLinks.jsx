@@ -2,7 +2,7 @@ import { Route, Routes } from "react-router-dom"
 import Dashboard from '../pages/dashboard/Dashboard'
 import Customer from '../pages/customer/Customer'
 
-const Links = () => {
+const RouteLinks = () => {
   return (
   <Routes>
     <Route path="/"  element={<Dashboard />} />   
@@ -16,4 +16,4 @@ const Links = () => {
   )
 }
 
-export default Links
+export default RouteLinks
