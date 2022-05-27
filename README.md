@@ -1,6 +1,8 @@
-# React Admin Panel
-## `clone `
-## `npm install`
+## React Admin Panel
+
+### `clone `
+
+### `npm install`
 
 In the project directory, you can run:
 
