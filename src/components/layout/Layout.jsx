@@ -1,12 +1,12 @@
 import './layout.css'
 import { useSelector, useDispatch } from "react-redux"
 import ThemeAction from '../../redux/actions/ThemeAction'
-import { useEffect, useState } from "react"
-import ClockLoader from "react-spinners/ClockLoader"
+import { Suspense, useEffect, useState } from "react"
 import { BrowserRouter } from 'react-router-dom'
 import Sidebar from '../sidebar/Sidebar'
 import Navbar from '../navbar/Navbar'
 import RouteLinks from '../RouteLinks'
+import Loader from '../loader/Loader'
 const Layout = () => {
   const themeReducer = useSelector(state => state.ThemeReducer)
   const dispatch = useDispatch()
@@ -32,25 +32,25 @@ const Layout = () => {
   return (
  
     <div >
-      {loading ?  <div className='appLayout'>  <ClockLoader  color={`#349eff`}   size={150} />
-       <div className="app-text">
-       {`\n`}
-           <h2>
-           please wait a moment :) 
-          </h2>
-       </div>
-       </div>
-       :<BrowserRouter> 
+      {loading ? <Loader/>
+       : <BrowserRouter> 
+      
        <div className={`layout ${themeReducer.mode} ${themeReducer.color}`}>
+      
             <Sidebar/>
             <div className="layout__content">
             <Navbar/>
                 <div className="layout__content-main">
+                <Suspense fallback={<Loader/>}>
                     <RouteLinks/>
+                    </Suspense>
                 </div>
             </div>
+          
       </div>
       </BrowserRouter>
+   
+
        }
     </div>
     

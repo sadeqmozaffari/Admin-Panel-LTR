@@ -1,9 +1,11 @@
+import { lazy } from "react"
 import { Route, Routes } from "react-router-dom"
-import Dashboard from '../pages/dashboard/Dashboard'
-import Customer from '../pages/customer/Customer'
 
+const Customer = lazy(()=>import('../pages/customer/Customer'))
+const Dashboard = lazy(() => import('../pages/dashboard/Dashboard'))
 const RouteLinks = () => {
   return (
+    
   <Routes>
     <Route path="/"  element={<Dashboard />} />   
       <Route path="customers" element={<Customer />} /> 
@@ -12,6 +14,7 @@ const RouteLinks = () => {
         element={<div>Default Page Content</div>}
       />
     </Routes>
+
 
   )
 }
