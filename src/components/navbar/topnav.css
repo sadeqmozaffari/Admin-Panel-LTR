@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: space-between;
     height: var(--topnav-height);
-    /* box-shadow: var(--box-shadow); */
+    box-shadow: var(--box-shadow);
 }
 
 .topnav__search {

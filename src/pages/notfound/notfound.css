@@ -1,0 +1,30 @@
+.notfound-style {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2.5rem;
+    font-weight: 900;
+
+
+}
+
+.size-icon-notfound {
+    font-size: 6.5rem;
+    font-weight: 900;
+    margin-top: 100px;
+}
+
+.font-color {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: #349eff;
+    justify-content: space-between;
+
+}
+
+.back-font {
+    font-weight: 900;
+    font-weight: bolder;
+}

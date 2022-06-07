@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom"
 
 const Customer = lazy(()=>import('../pages/customer/Customer'))
 const Dashboard = lazy(() => import('../pages/dashboard/Dashboard'))
+const Notfound= lazy(()=>import('../pages/notfound/NotFound'))
 const RouteLinks = () => {
   return (
     
@@ -11,7 +12,7 @@ const RouteLinks = () => {
       <Route path="customers" element={<Customer />} /> 
       <Route
         path="*"                                    
-        element={<div>Default Page Content</div>}
+        element={<Notfound/>}
       />
     </Routes>
 
