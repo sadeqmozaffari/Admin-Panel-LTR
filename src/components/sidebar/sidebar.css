@@ -8,6 +8,7 @@
     box-shadow: var(--box-shadow);
 }
 
+
 .sidebar__logo {
     height: 150px;
     display: flex;
@@ -53,3 +54,4 @@
     );
     color: var(--txt-white);
 }
+

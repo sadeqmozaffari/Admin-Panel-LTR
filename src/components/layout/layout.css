@@ -12,3 +12,55 @@
     padding: 30px;
 }
 
+
+@media only screen and (max-width: 768px){
+    .sidebar{
+        min-width:50px !important;
+    }
+    .layout__content{
+       padding-left: 50px !important;
+    }
+    .sidebar__item-inner span{
+        display: none;
+    }
+    .sidebar__logo img{
+       display: none;
+    }
+    .sidebar__logo::after{
+       content:'AP';
+       padding: 10px;
+       display: block;
+       font-size: 1rem;
+       color: white;
+       background-image: linear-gradient( to right, var(--main-color), var(--second-color) );
+       border-radius: 50%;
+      
+       font-family: fantasy;
+     }
+  
+    .sidebar__item-inner > i {
+        margin-right: 0px !important;
+        
+    }
+    .sidebar__item-inner {
+        padding: 20px 15px !important;
+    }
+   
+    .sidebar__item {
+        padding: 0 10px !important;
+    }
+  
+    
+}
+@media only screen and (max-width: 550px) {
+
+    .topnav__search>input {
+        display: none;
+    }
+    .bell{
+        display: none;
+    }
+    .sidebar__logo img{
+        display: none;
+     }
+}

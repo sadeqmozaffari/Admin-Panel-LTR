@@ -7,6 +7,7 @@ import './assets/css/grid.css'
 import './assets/css/theme.css'
 import './assets/css/index.css'
 
+
 import { Provider } from 'react-redux';
 import store from './redux/reducers';
  
